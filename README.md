@@ -1,5 +1,7 @@
 # python-electron-reactui
 
+simple example app to show usage of python with electronapp that uses react-library
+
 Development:
 1)create a virtualenv for python in pycode folder
 pip install:
