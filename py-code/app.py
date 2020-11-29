@@ -3,6 +3,9 @@ from flask import send_file
 import os
 import signal
 from flask_cors import CORS
+import numpy as np  
+import matplotlib.pyplot as plt  
+from PIL import ImageGrab
 
 
 
@@ -34,7 +37,30 @@ def devider(a,b):
         return str(anum/bnum)
 
 
+@app.route('/calc/draw/<a>/<b>')
+def draw(a,b):
+    anum= float(a)
+    bnum = float(b)
+    x = np.arange(anum, bnum)  
+    y = x*x
+    
+    plt.title("Line graph")  
+    plt.xlabel("X axis")  
+    plt.ylabel("Y axis")  
+    plt.plot(x, y, color ="red")  
+    plt.show()
+    
 
+@app.route('/screenshot')
+def shoot():
+    image = ImageGrab.grab()
+    image.save('sc.png')
+    return 'sucess'
+
+
+@app.route('/captured/<a>')
+def shooted(a):
+    return send_file('sc.png')
 
 
 @app.route('/endapp')

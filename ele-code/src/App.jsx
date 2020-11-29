@@ -6,6 +6,9 @@ import Add from "./components/Workers/Add/Add";
 import Multiply from "./components/Workers/Multiply/Multiply";
 import Devide from "./components/Workers/Devide/Devide";
 import Tabs from './components/UI-components/Tab/Tabs'
+import Draw from './components/Workers/Draw/Draw'
+import Screencpt from './components/Workers/Screencpt/Screencpt'
+
 
 function App() {
 
@@ -21,6 +24,12 @@ function App() {
       </Route>
       <Route path="/Devide">
         <Devide />
+      </Route>
+      <Route path="/draw">
+        <Draw />
+      </Route>
+      <Route path="/screen">
+        <Screencpt />
       </Route>
     </Switch>
     <Tabs />

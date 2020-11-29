@@ -21,6 +21,16 @@ function Tabs() {
       }}>
       <p>devide 2 numbers</p>
     </NavLink>
+    <NavLink className={classes.tabs} to="/draw" activeStyle={{
+        borderBottom: "solid 1px blue"
+      }}>
+      <p>Draw plots</p>
+    </NavLink>
+    <NavLink className={classes.tabs} to="/screen" activeStyle={{
+        borderBottom: "solid 1px blue"
+      }}>
+      <p>Screenshot</p>
+    </NavLink>
   </div>)
 }
 
