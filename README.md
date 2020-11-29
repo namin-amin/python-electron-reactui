@@ -7,6 +7,9 @@ Development:
 pip install:
       *flask
       *flask-cors
+      *numpy(for graph)
+      *matplotlib(for graph)
+      *pillow(for screenshot)
 
 start the development server
 
