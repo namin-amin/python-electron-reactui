@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import classes from '../Multiply/Multiply.module.css'
 import axios from "axios";
+import {Button , Image} from "react-bootstrap"
 
 function Screencpt() {
   const [update,updater] = useState(0)
@@ -20,15 +21,15 @@ function Screencpt() {
 
   return (
     <div className={classes.contain}>
-      <h3>capture screen</h3>
-      <img
+      <h3 className="text-primary" >capture screen</h3>
+      <Image
         src={image}
-        alt="https://www.elegantthemes.com/blog/wp-content/uploads/2018/02/502-error.png" width='500px'
-     height='500px' />
+         width='600px'
+     height='337.50px' thumbnail />
 
-      <button className={classes.btn} onClick={Capture}>
+      <Button variant="outline-primary" className={classes.btn} onClick={Capture}>
         Capture
-      </button>
+      </Button>
     </div>
   );
 }

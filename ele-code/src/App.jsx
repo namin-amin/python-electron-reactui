@@ -1,11 +1,11 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Tabs,Tab } from 'react-bootstrap';
+import './bootstrap.min.css';
 
-import classes from "./App.module.css";
+
 import Add from "./components/Workers/Add/Add";
 import Multiply from "./components/Workers/Multiply/Multiply";
 import Devide from "./components/Workers/Devide/Devide";
-import Tabs from './components/UI-components/Tab/Tabs'
 import Draw from './components/Workers/Draw/Draw'
 import Screencpt from './components/Workers/Screencpt/Screencpt'
 
@@ -14,26 +14,23 @@ function App() {
 
   return (
 
-    <div className={classes.App}>
-    <Switch>
-      <Route path="/" exact>
-       <Multiply />
-      </Route>
-      <Route path="/Add">
-        <Add />
-      </Route>
-      <Route path="/Devide">
-        <Devide />
-      </Route>
-      <Route path="/draw">
-        <Draw />
-      </Route>
-      <Route path="/screen">
-        <Screencpt />
-      </Route>
-    </Switch>
-    <Tabs />
-    </div>
+    <Tabs defaultActiveKey="add" id="uncontrolled-tab-example">
+  <Tab eventKey="add" title="Add" mountOnEnter unmountOnExit>
+    <Add />
+  </Tab>
+  <Tab eventKey="multy" title="Multiply" mountOnEnter unmountOnExit>
+    <Multiply />
+  </Tab>
+  <Tab eventKey="devide" title="Devide" mountOnEnter unmountOnExit>
+    <Devide/>
+  </Tab>
+  <Tab eventKey="draw" title="Draw" mountOnEnter unmountOnExit>
+    <Draw/>
+  </Tab>
+  <Tab eventKey="scrncapt" title="Screencapture" mountOnEnter unmountOnExit>
+    <Screencpt/>
+  </Tab>
+</Tabs>
 
 
   );
